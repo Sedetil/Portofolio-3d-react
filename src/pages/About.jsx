@@ -1,4 +1,4 @@
-import React from "react";
+import profile from "../assets/images/foto.jpeg";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,18 +11,31 @@ import CTA from "../components/CTA";
 const About = () => {
   return (
     <section className="max-container">
-      <h1 className="head-text">
-        Hello, I'm{" "}
-        <span className="blue-gradient_text font-semibold drop-shadow">
-          Alwan
-        </span>
-      </h1>
-
-      <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>
-          Software Engineer based in Indonesia, specializing in technical
-          education through hands-on learning and building applications.
-        </p>
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+        <div className="flex-1">
+          <h1 className="head-text">
+            Hello, I'm{" "}
+            <span className="blue-gradient_text font-semibold drop-shadow">
+              Alwan
+            </span>
+          </h1>
+          <img
+            src={profile}
+            alt="Alwan"
+            className="block md:hidden mx-auto w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover ring-4 ring-blue-500 shadow-lg my-4"
+          />
+          <div className="mt-5 flex flex-col gap-3 text-slate-500">
+            <p>
+              A student at Politeknik Negeri Lampung with a strong passion for software development. 
+              I enjoy building applications, learning through hands-on experience, and turning ideas into innovative digital solutions.
+            </p>
+          </div>
+        </div>
+        <img
+          src={profile}
+          alt="Alwan"
+          className="hidden md:block w-24 h-24 md:w-36 md:h-36 rounded-full object-cover ring-4 ring-blue-500 shadow-lg mt-4 md:mt-0"
+        />
       </div>
 
       <div className="py-10 flex flex-col">
@@ -45,11 +58,12 @@ const About = () => {
       </div>
 
       <div className="py-16">
-        <h3 className="subhead-text">Work Experience</h3>
+        <h3 className="subhead-text">Education</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            I've worked with various companies, honing my skills and
-            collaborating with smart individuals. Here's the rundown:
+            I've studied at several educational institutions developing strong
+            academic foundations and practical skills along the way. Here's my
+            education journey:
           </p>
         </div>
 

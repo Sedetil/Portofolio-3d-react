@@ -23,5 +23,4 @@ const Plane = ({ isRotating, ...props }) => {
     </mesh>
   )
 }
-
 export default Plane

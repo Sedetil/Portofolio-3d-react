@@ -22,11 +22,6 @@ const stats = [
     label: "Sertifikat",
     value: "12",
   },
-  {
-    icon: <FaAward className="text-3xl text-purple-500" />,
-    label: "Penghargaan",
-    value: "2",
-  },
 ];
 
 const Statistic = () => (

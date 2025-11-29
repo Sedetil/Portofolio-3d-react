@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Statistic from "./pages/Statistic";
 import Contact from "./pages/Contact";
+import Soon from "./pages/Soon";
 
 const App = () => (
   <Router>
@@ -16,6 +17,7 @@ const App = () => (
       <Route path="/projects" element={<Projects />} />
       <Route path="/statistic" element={<Statistic />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/soon" element={<Soon />} />
     </Routes>
   </Router>
 );

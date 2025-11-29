@@ -18,6 +18,7 @@ const projectData = [
   { tahun: "2022", project: 4 },
   { tahun: "2023", project: 3 },
   { tahun: "2024", project: 1 },
+  { tahun: "2025", project: 3 },
 ];
 
 // Data pengalaman
@@ -52,12 +53,6 @@ const certificateData = [
   { jenis: "Dasar dan Penggunaan Generatif AI", jumlah: 1 },
 ];
 
-// Data penghargaan
-const awardData = [
-  { jenis: "Lomba Coding", jumlah: 1 },
-  { jenis: "Hackathon", jumlah: 1 },
-];
-
 const StatisticPage = () => {
   const [visitorCount, setVisitorCount] = useState(0);
 
@@ -74,8 +69,8 @@ const StatisticPage = () => {
     <section className="max-container flex flex-col items-center justify-center min-h-[60vh] px-2 sm:px-4 md:px-8">
       <h1 className="head-text mb-4 text-center">Statistik & Achievement</h1>
       <p className="text-slate-600 mb-2 text-center max-w-xl">
-        Berikut adalah ringkasan pencapaian, pengalaman, dan statistik singkat
-        saya di dunia pengembangan perangkat lunak dan teknologi.
+        Here is a brief summary of my achievements, experience and statistics 
+        in the world of software development and technology.
       </p>
       <div className="text-xs text-slate-500 mb-6">
         Jumlah Pengunjung Halaman Ini:{" "}
@@ -97,7 +92,7 @@ const StatisticPage = () => {
               margin={{ top: 20, right: 30, left: 0, bottom: 5 }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="tahun" />
+              <XAxis dataKey="tahun" interval={0} />
               <YAxis allowDecimals={false} />
               <Tooltip />
               <Legend />
@@ -169,29 +164,6 @@ const StatisticPage = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Penghargaan Pie Chart */}
-        <div className="w-full max-w-2xl mt-4 bg-white/80 rounded-xl shadow p-4 sm:p-6 mb-12">
-          <h2 className="text-lg sm:text-xl font-semibold mb-2 text-center">
-            Penghargaan per Jenis
-          </h2>
-          <ResponsiveContainer width="100%" height={220}>
-            <PieChart>
-              <Pie
-                data={awardData}
-                dataKey="jumlah"
-                nameKey="jenis"
-                cx="50%"
-                cy="50%"
-                outerRadius={70}
-                fill="#f59e42"
-                label
-              />
-              <Tooltip />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
         </div>
       </div>
     </section>
